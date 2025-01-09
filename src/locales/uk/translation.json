@@ -1,3 +1,12 @@
 {
-  "hello": "привіт"
+  "heroTitle": "uk-Ателье “Танюша”",
+  "heroDescription": "uk-Ателье «Танюша» оказывает услуги по ремонту одежды, а также специализируется на пошиве женского, мужского и детского трикотажа.",
+  "ctaTitle": "uk-связаться c нами",
+  "a11ylngSwitcherLabel": "uk-Выберете язык",
+  "a11ylngSwitcherRU": "uk-Русский",
+  "a11ylngSwitcherUK": "uk-Украинский",
+  "menuItemAboutUs": "uk-о нас",
+  "menuItemServices": "uk-услуги",
+  "menuItemReviews": "uk-отзывы",
+  "menuItemContactUs": "uk-контакты"
 }
