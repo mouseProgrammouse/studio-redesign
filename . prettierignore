@@ -1,0 +1,12 @@
+# Ignore artifacts
+node_modules
+.expo
+.expo-shared
+
+# Native build folders
+android
+ios
+
+# Others
+build
+dist
