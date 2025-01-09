@@ -13,6 +13,14 @@ const gitignorePath = path.resolve(__dirname, ".gitignore");
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   includeIgnoreFile(gitignorePath),
+  {
+    plugins: ["prettier"],
+    rules: {
+      // Prettier configuration overrides (if needed)
+      "prettier/prettier": "error",
+      // You can add or override any other ESLint rules here
+    },
+  },
   { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
   {
     settings: {
