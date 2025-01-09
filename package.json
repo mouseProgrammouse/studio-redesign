@@ -21,7 +21,7 @@
       "npm run format:fix"
     ],
     "*.{json,css,scss,md}": [
-      "format:fix"
+      "npm run format:fix"
     ]
   },
   "keywords": [],
