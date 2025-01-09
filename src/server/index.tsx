@@ -4,7 +4,7 @@ import { renderToString } from 'react-dom/server';
 import { I18nextProvider } from 'react-i18next';
 import middleware from 'i18next-http-middleware';
 import App from '../App';
-import i18n from '../i18n';
+import i18n from '../../i18n';
 
 const app = express();
 const PORT = process.env.PORT || 3000;

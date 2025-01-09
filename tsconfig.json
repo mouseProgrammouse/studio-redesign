@@ -13,7 +13,7 @@
         "*": ["node_modules/*"]
       }
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "i18n.ts"],
     "exclude": ["node_modules", "dist"]
   }
   
