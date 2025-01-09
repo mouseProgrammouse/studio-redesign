@@ -1,5 +1,5 @@
-const path = require('path');
-const nodeExternals = require('webpack-node-externals');
+import * as path from 'path';
+import * as nodeExternals from 'webpack-node-externals';
 
 module.exports = {
   entry: './src/server/index.tsx',

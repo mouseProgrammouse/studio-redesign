@@ -2,8 +2,8 @@ import i18n from 'i18next';
 import Backend from 'i18next-fs-backend';
 import { initReactI18next } from 'react-i18next';
 import { LanguageDetector } from 'i18next-http-middleware';
+import path from "node:path";
 
-const { join } = require('path')
 
 i18n
   .use(Backend)
@@ -24,7 +24,7 @@ i18n
     ns: ['translation'],
     defaultNS: 'translation',
     backend: {
-      loadPath: join(__dirname, '../src/locales/{{lng}}/{{ns}}.json'),
+      loadPath: path.join(__dirname, '../src/locales/{{lng}}/{{ns}}.json'),
     },
     interpolation: {
       escapeValue: false, // React already prevents XSS attacks
