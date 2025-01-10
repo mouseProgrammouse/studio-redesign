@@ -4,12 +4,15 @@ import { renderToString } from "react-dom/server";
 import { I18nextProvider } from "react-i18next";
 import middleware from "i18next-http-middleware";
 import App from "../App";
+import path from "node:path";
 import i18n from "../../i18n";
+
+// eslint-disable-next-line
+require("dotenv").config(); // Load .env variables into process.env
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-app.use("/static", express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(middleware.handle(i18n));
 
 app.get("*", (req, res) => {
@@ -22,14 +25,7 @@ app.get("*", (req, res) => {
   const html = `
     <!DOCTYPE html>
     <html lang="${i18n.language}">
-      <head>
-        <meta charset="UTF-8" />
-        <title>Studio</title>
-        <link rel="icon" href="data:,">
-      </head>
-      <body>
-        <div id="root">${appString}</div>
-      </body>
+      ${appString}
     </html>
   `;
   res.send(html);

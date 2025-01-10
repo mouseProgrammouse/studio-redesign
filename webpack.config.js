@@ -2,6 +2,8 @@
 const path = require("path");
 // eslint-disable-next-line
 const nodeExternals = require("webpack-node-externals");
+// eslint-disable-next-line
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/server/index.tsx",
@@ -24,6 +26,11 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new CopyPlugin({
+      patterns: [{ from: "src/public", to: "public" }],
+    }),
+  ],
   watch: true,
   watchOptions: {
     aggregateTimeout: 300,
