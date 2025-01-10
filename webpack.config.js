@@ -1,5 +1,7 @@
-import * as path from "path";
-import * as nodeExternals from "webpack-node-externals";
+// eslint-disable-next-line
+const path = require("path");
+// eslint-disable-next-line
+const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
   entry: "./src/server/index.tsx",

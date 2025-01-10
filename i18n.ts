@@ -10,7 +10,7 @@ i18n
   .use(initReactI18next)
   .init({
     detection: {
-      order: ["langDetectorFromPath", "path", "querystring"],
+      order: ["path", "querystring"],
       lookupFromPathIndex: 0,
       lookupFromSubdomainIndex: 0,
       lookupQuerystring: "lng",
