@@ -4,15 +4,24 @@ import { renderToString } from "react-dom/server";
 import { I18nextProvider } from "react-i18next";
 import middleware from "i18next-http-middleware";
 import App from "../App";
-import i18n from "../../i18n";
+import path from "node:path";
+import i18n from "../../i18nServer";
+
+// eslint-disable-next-line
+require("dotenv").config(); // Load .env variables into process.env
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const cssFile =
+  process.env.NODE_ENV === "production" ? "global.min.css" : "global.css";
 
-app.use("/static", express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(middleware.handle(i18n));
 
 app.get("*", (req, res) => {
+  const initialI18nStore = JSON.stringify(req.i18n.store.data);
+  const initialLanguage = req.i18n.language;
+
   const appString = renderToString(
     <I18nextProvider i18n={req.i18n}>
       <App />
@@ -21,15 +30,22 @@ app.get("*", (req, res) => {
 
   const html = `
     <!DOCTYPE html>
-    <html lang="${i18n.language}">
+    <html lang="${initialLanguage}">
       <head>
-        <meta charset="UTF-8" />
-        <title>Studio</title>
-        <link rel="icon" href="data:,">
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>${i18n.t("mainTitle")}</title>
+        <link rel="icon" href="data:," />
+        <link rel="stylesheet" type="text/css" href="${cssFile}" />
+        <script>
+          window.initialI18nStore = ${JSON.stringify(initialI18nStore)};
+          window.initialLanguage = "${initialLanguage}";
+      </script>
       </head>
       <body>
-        <div id="root">${appString}</div>
+        <main>${appString}</main>
       </body>
+      <script src="/bundle.js"></script>
     </html>
   `;
   res.send(html);
