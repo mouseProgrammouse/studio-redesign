@@ -13,6 +13,6 @@
       "*": ["node_modules/*"]
     }
   },
-  "include": ["src/**/*", "i18n.ts"],
+  "include": ["src/**/*", "i18nServer.ts", "src/global.d.ts", "i18nClient.ts"],
   "exclude": ["node_modules", "dist"]
 }
