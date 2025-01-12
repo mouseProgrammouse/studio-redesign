@@ -49,4 +49,4 @@ Build the client-side code.
 React(Frontend) + Express.js(Backend) + i18next(Internationalization)
 
 ### Code Quality
-ESLint + Prettier with Husky
+ESLint, Prettier, Husky and lint-staged Integration
