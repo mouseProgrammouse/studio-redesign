@@ -33,6 +33,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/react-slick": "^0.23.13",
     "classnames": "^2.5.1",
     "clean-css": "^5.3.3",
     "dotenv": "^16.4.7",
@@ -42,7 +43,8 @@
     "i18next-http-middleware": "^3.7.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-i18next": "^15.4.0"
+    "react-i18next": "^15.4.0",
+    "react-slick": "^0.30.3"
   },
   "devDependencies": {
     "@axe-core/react": "^4.10.1",

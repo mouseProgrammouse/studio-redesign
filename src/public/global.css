@@ -73,7 +73,7 @@ button:hover {
 
 section.hero {
   min-width: 304px;
-  margin: var(--size-x4) var(--size-x3) var(--size-x5) var(--size-x3);
+  margin: var(--size-x4) auto var(--size-x5);
   max-width: 686px;
   display: flex;
   flex-flow: column;
@@ -85,7 +85,7 @@ section.hero p {
   margin-top: var(--size-half);
 }
 
-div.bg-drop + div.main-content {
+nav.bg-drop + div.main-content {
   filter: blur(4px);
 }
 
@@ -198,6 +198,44 @@ nav ul a:hover {
 
 .lng-selector a.active {
   font-weight: 700;
+}
+
+.hero-slider-container {
+  width: 100vw;
+  max-width: 1215px;
+  margin: auto;
+}
+
+.hero-slider-container .slide img {
+  width: 100%;
+}
+
+.hero-slider-container .slick-list {
+  margin: 0 -16px;
+}
+
+.hero-slider-container .slick-slide > div {
+  padding: 0 var(--size-half);
+}
+
+.about-us {
+  min-width: 304px;
+  margin: var(--size) auto var(--size-x5);
+  max-width: 686px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-us p {
+  text-align: start;
+}
+
+.about-us br {
+  margin-bottom: 8px;
+  content: "";
+  display: block;
 }
 
 /*

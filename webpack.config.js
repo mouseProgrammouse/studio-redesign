@@ -16,7 +16,7 @@ module.exports = [
     entry: "./src/server/index.tsx",
     target: "node",
     mode: "development", // Change to 'production' for production builds
-    externals: [nodeExternals()],
+    externals: [nodeExternals({ allowlist: ["siper"] })],
     output: {
       path: path.resolve(__dirname, "dist"),
       filename: "server.js",
@@ -69,6 +69,10 @@ module.exports = [
               ],
             },
           },
+        },
+        {
+          test: /\.css$/, // Add rule for CSS files
+          use: ["style-loader", "css-loader"], // Process CSS with style-loader and css-loader
         },
       ],
     },

@@ -1,6 +1,8 @@
+import React from "react";
 import Menu from "./components/Menu";
 import HeroSection from "./components/HeroSection";
-import React from "react";
+import HeroCarousel from "./components/HeroCarousel";
+import AboutUs from "./components/AboutUs";
 
 const App: React.FC = () => {
   return (
@@ -8,6 +10,8 @@ const App: React.FC = () => {
       <Menu />
       <div className="main-content">
         <HeroSection />
+        <HeroCarousel />
+        <AboutUs />
       </div>
     </>
   );
