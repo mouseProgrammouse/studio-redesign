@@ -6,7 +6,9 @@ const App: React.FC = () => {
   return (
     <>
       <Menu />
-      <HeroSection />
+      <div className="main-content">
+        <HeroSection />
+      </div>
     </>
   );
 };
