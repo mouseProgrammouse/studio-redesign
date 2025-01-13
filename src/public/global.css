@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap");
+
+:root {
+  --primary-color: #e4b381;
+  --font-color: #111;
+  --secondar-font-color: #fff;
+  --icon-color: #d9d9d9;
+  --size-half: 4px;
+  --size: 8px;
+  --size-x2: 16px;
+  --size-x3: 24px;
+  --size-x4: 32px;
+  --size-x5: 40px;
+  --size-x6: 48px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Lora", serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 164%;
+}
+
+main {
+  align-items: center;
+  flex-flow: column;
+  display: flex;
+  padding: 12px 68px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--font-color);
+  font-size: 14px;
+  line-height: 164%;
+  min-width: 382px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+a.button,
+button {
+  padding: var(--size) 68px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--secondar-font-color);
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+a.button:hover,
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--secondar-font-color);
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  width: 80%;
+  background-color: #fff;
+  top: 0;
+  z-index: 1;
+}
+
+section.hero {
+  min-width: 304px;
+  margin: var(--size-x4) var(--size-x3) var(--size-x5) var(--size-x3);
+  max-width: 686px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+}
+
+section.hero p {
+  margin-top: var(--size-half);
+}
+
+div.bg-drop + div.main-content {
+  filter: blur(4px);
+}
+
+section.hero h1 {
+  margin: 0;
+}
+
+.visible {
+  display: block;
+  height: 100vh;
+  -webkit-box-shadow: 0px 0px 18px -8px rgba(77, 77, 77, 0.85);
+  -moz-box-shadow: 0px 0px 18px -8px rgba(77, 77, 77, 0.85);
+  box-shadow: 0px 0px 18px -8px rgba(77, 77, 77, 0.85);
+}
+
+.hidden {
+  display: none;
+}
+
+.mobile-menu {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.mobile-menu ul {
+  padding: var(--size-x6) var(--size-x3) var(--size-x2) var(--size-x3);
+}
+
+.mobile-menu li {
+  font-size: var(--size-x2);
+  padding-bottom: var(--size);
+}
+
+.mobile-menu .lng-selector {
+  padding-top: var(--size-x2);
+}
+
+.mobile-menu .lng-selector a {
+  padding-right: var(--size);
+}
+
+.desktop-menu {
+  display: none;
+}
+
+.hamburger-menu {
+  position: absolute;
+  right: 0;
+  padding: var(--size-x3);
+}
+
+.hamburger-menu span {
+  display: block;
+  content: "";
+  min-width: var(--size-x3);
+  margin-bottom: var(--size-half);
+  min-height: 2px;
+  background-color: var(--icon-color);
+  border-radius: 10px;
+  width: var(--size-x3);
+}
+
+.hamburger-menu.is-active span:nth-child(1) {
+  transform: translateY(6px) rotate(30deg);
+}
+
+.hamburger-menu.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.is-active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-30deg);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+}
+
+div.desktop-menu ul {
+  flex-flow: row;
+  min-width: 314px;
+  justify-content: space-between;
+}
+
+nav ul a,
+nav ul a:hover,
+nav ul a:visited {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+nav ul a:hover {
+  color: var(--icon-color);
+}
+
+.desktop-menu .lng-selector {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.desktop-menu .lng-selector a {
+  padding: 0 var(--size-half);
+}
+
+.lng-selector a.active {
+  font-weight: 700;
+}
+
+/*
+    Tablet (768px to 1024px)
+*/
+@media screen and (min-width: 768px) {
+  body,
+  button,
+  a,
+  a.button {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 64px;
+  }
+
+  .menu {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: block;
+    border-bottom: 1px solid var(--icon-color);
+    padding: var(--size-x3) 124px 0;
+  }
+
+  .desktop-menu li {
+    padding: 0 16px;
+  }
+
+  .desktop-menu .lng-selector {
+    padding: 0 24px;
+  }
+}
+
+/* 
+    Desktop (1024px and up)
+ */
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 64px;
+  }
+
+  .menu {
+    width: auto;
+    position: relative;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: block;
+    padding: var(--size-x4) 254px 0;
+    border-bottom: 1px solid var(--icon-color);
+  }
+
+  .desktop-menu li {
+    padding: 0 16px;
+  }
+
+  .desktop-menu .lng-selector {
+    padding: 0;
+  }
+}
