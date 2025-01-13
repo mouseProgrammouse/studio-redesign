@@ -8,8 +8,8 @@ const Menu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { key: "menuItemAboutUs", href: "…" },
-    { key: "menuItemServices", href: "…" },
+    { key: "menuItemAboutUs", href: "#AboutUs" },
+    { key: "menuItemServices", href: "#Services" },
     { key: "menuItemReviews", href: "…" },
     { key: "menuItemContactUs", href: "…" },
   ];

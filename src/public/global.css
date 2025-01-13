@@ -30,6 +30,16 @@ h1 {
   line-height: 164%;
 }
 
+h2 {
+  font-size: 32px;
+  line-height: 164%;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 117%;
+}
+
 main {
   align-items: center;
   flex-flow: column;
@@ -243,6 +253,49 @@ nav ul a:hover {
   display: block;
 }
 
+section.services {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  max-width: 924px;
+  margin: 0 auto;
+}
+
+section.services h2 {
+  text-align: center;
+  margin-bottom: var(--size-x2);
+}
+
+section.services h3 {
+  margin: var(--size) 0;
+}
+
+section.services p {
+  margin: var(--size) 0 var(--size-x4);
+}
+
+section.services ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  align-items: center;
+}
+
+section.services li {
+  margin: 0 24px;
+}
+
+section.services img {
+  width: 100%;
+}
+
+section.services .services-description {
+  display: none;
+}
+
 /*
     Tablet (768px to 1024px)
 */
@@ -256,6 +309,14 @@ nav ul a:hover {
 
   h1 {
     font-size: 64px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  h3 {
+    font-size: 28px;
   }
 
   .menu {
@@ -289,6 +350,42 @@ nav ul a:hover {
 
   .about-us p {
     margin-top: var(--size);
+  }
+
+  section.services {
+    margin-top: var(--size-x5);
+  }
+
+  section.services h2 {
+    margin-bottom: var(--size-x3);
+  }
+
+  section.services h3 {
+    margin: var(--size) auto var(--size-x2);
+  }
+
+  section.services ul {
+    flex-flow: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  section.services li {
+    width: 30%;
+    max-width: 260px;
+  }
+
+  section.services img {
+    max-width: 100%;
+  }
+
+  section.services .services-description {
+    max-width: 686px;
+    margin: 0 auto;
+  }
+
+  section.services .services-description {
+    display: block;
   }
 }
 
@@ -329,5 +426,9 @@ nav ul a:hover {
 
   section.hero {
     margin: var(--size-x4) auto var(--size-x7);
+  }
+
+  section.services {
+    margin-top: 60px;
   }
 }
