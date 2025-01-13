@@ -17,7 +17,7 @@ const HeroCarousel: React.FC = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           centerMode: true,
           slidesToScroll: 1,
         },
@@ -26,14 +26,15 @@ const HeroCarousel: React.FC = () => {
   };
 
   const SLides = [
-    { img: "/img/img2.png" },
+    { img: "/img/img1.png" },
     { img: "/img/img2.png" },
     { img: "/img/img3.png" },
     { img: "/img/img4.png" },
     { img: "/img/img5.png" },
     { img: "/img/img6.png" },
-    { img: "/img/img2.png" },
-    { img: "/img/img2.png" },
+    { img: "/img/img7.png" },
+    { img: "/img/img8.png" },
+    { img: "/img/img9.png" },
   ];
 
   return (
