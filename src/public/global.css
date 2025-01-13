@@ -13,6 +13,7 @@
   --size-x4: 32px;
   --size-x5: 40px;
   --size-x6: 48px;
+  --size-x7: 56px;
 }
 
 h1,
@@ -79,6 +80,7 @@ section.hero {
   flex-flow: column;
   align-items: center;
   text-align: center;
+  padding: 0 var(--size-x2);
 }
 
 section.hero p {
@@ -226,13 +228,14 @@ nav ul a:hover {
   flex-flow: column;
   align-items: center;
   text-align: center;
+  padding: 0 var(--size-x2);
 }
 
 .about-us p {
   text-align: start;
+  margin-top: var(--size);
 }
-
-.about-us br {
+s .about-us br {
   margin-bottom: 8px;
   content: "";
   display: block;
@@ -277,6 +280,10 @@ nav ul a:hover {
   .desktop-menu .lng-selector {
     padding: 0 24px;
   }
+
+  section.hero {
+    margin: var(--size-x4) auto var(--size-x7);
+  }
 }
 
 /* 
@@ -312,5 +319,9 @@ nav ul a:hover {
 
   .desktop-menu .lng-selector {
     padding: 0;
+  }
+
+  section.hero {
+    margin: var(--size-x4) auto var(--size-x7);
   }
 }
