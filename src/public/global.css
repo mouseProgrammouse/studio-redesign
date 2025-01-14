@@ -13,6 +13,7 @@
   --size-x4: 32px;
   --size-x5: 40px;
   --size-x6: 48px;
+  --size-x7: 56px;
 }
 
 h1,
@@ -45,6 +46,7 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 a.button,
@@ -73,19 +75,20 @@ button:hover {
 
 section.hero {
   min-width: 304px;
-  margin: var(--size-x4) var(--size-x3) var(--size-x5) var(--size-x3);
+  margin: var(--size-x4) auto var(--size-x5);
   max-width: 686px;
   display: flex;
   flex-flow: column;
   align-items: center;
   text-align: center;
+  padding: 0 var(--size-x2);
 }
 
 section.hero p {
   margin-top: var(--size-half);
 }
 
-div.bg-drop + div.main-content {
+nav.bg-drop + div.main-content {
   filter: blur(4px);
 }
 
@@ -200,6 +203,46 @@ nav ul a:hover {
   font-weight: 700;
 }
 
+.hero-slider-container {
+  width: 100vw;
+  max-width: 1215px;
+  margin: auto;
+}
+
+.hero-slider-container .slide img {
+  width: 100%;
+}
+
+.hero-slider-container .slick-list {
+  margin: 0 -16px;
+}
+
+.hero-slider-container .slick-slide > div {
+  padding: 0 var(--size-half);
+}
+
+.about-us {
+  min-width: 304px;
+  margin: var(--size) auto var(--size-x5);
+  max-width: 686px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 var(--size-x3);
+}
+
+.about-us p {
+  text-align: start;
+  margin-top: var(--size-half);
+}
+
+.about-us br {
+  margin-bottom: 8px;
+  content: "";
+  display: block;
+}
+
 /*
     Tablet (768px to 1024px)
 */
@@ -239,6 +282,14 @@ nav ul a:hover {
   .desktop-menu .lng-selector {
     padding: 0 24px;
   }
+
+  section.hero {
+    margin: var(--size-x4) auto var(--size-x7);
+  }
+
+  .about-us p {
+    margin-top: var(--size);
+  }
 }
 
 /* 
@@ -274,5 +325,9 @@ nav ul a:hover {
 
   .desktop-menu .lng-selector {
     padding: 0;
+  }
+
+  section.hero {
+    margin: var(--size-x4) auto var(--size-x7);
   }
 }
