@@ -50,7 +50,7 @@ const Menu: React.FC = () => {
         >
           {menuItems.map(({ key, href }) => (
             <li key={key}>
-              <a href={href} role="menuitem">
+              <a href={href} role="menuitem" onClick={() => setIsOpen(false)}>
                 {t(key)}
               </a>
             </li>
@@ -63,6 +63,7 @@ const Menu: React.FC = () => {
                 className={classNames({ active: lang === i18n.language })}
                 aria-label={t(`a11ylngSwitcher${lang.toUpperCase()}`)}
                 role="menuitem"
+                onClick={() => setIsOpen(false)}
               >
                 {t(lang)}
               </a>
