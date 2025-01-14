@@ -8,8 +8,8 @@ const Menu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { key: "menuItemAboutUs", href: "…" },
-    { key: "menuItemServices", href: "…" },
+    { key: "menuItemAboutUs", href: "#AboutUs" },
+    { key: "menuItemServices", href: "#Services" },
     { key: "menuItemReviews", href: "…" },
     { key: "menuItemContactUs", href: "…" },
   ];
@@ -50,7 +50,7 @@ const Menu: React.FC = () => {
         >
           {menuItems.map(({ key, href }) => (
             <li key={key}>
-              <a href={href} role="menuitem">
+              <a href={href} role="menuitem" onClick={() => setIsOpen(false)}>
                 {t(key)}
               </a>
             </li>
@@ -63,6 +63,7 @@ const Menu: React.FC = () => {
                 className={classNames({ active: lang === i18n.language })}
                 aria-label={t(`a11ylngSwitcher${lang.toUpperCase()}`)}
                 role="menuitem"
+                onClick={() => setIsOpen(false)}
               >
                 {t(lang)}
               </a>
