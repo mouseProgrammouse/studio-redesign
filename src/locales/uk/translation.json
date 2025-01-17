@@ -23,5 +23,8 @@
   "menuItemAboutUs": "uk - о нас",
   "menuItemServices": "uk - услуги",
   "menuItemReviews": "uk - отзывы",
-  "menuItemContactUs": "uk - контакты"
+  "reviewsTitle": "Отзывы клиентов",
+  "menuItemContactUs": "uk - контакты",
+  "studioAddress": "uk - ул. Благовисна 144,<br/>г.Черкассы",
+  "studioContacts": "uk - тел: (073) 133-2930<br/>Татьяна"
 }

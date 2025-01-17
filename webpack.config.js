@@ -4,10 +4,15 @@ const path = require("path");
 const nodeExternals = require("webpack-node-externals");
 // eslint-disable-next-line
 const CopyPlugin = require("copy-webpack-plugin");
+// eslint-disable-next-line
+const Dotenv = require("dotenv-webpack");
 
 // Shared settings can be placed here, if needed
 const commonResolve = {
   extensions: [".ts", ".tsx", ".js", ".jsx"],
+  alias: {
+    "@components": path.resolve(__dirname, "src/components/"),
+  },
 };
 
 module.exports = [
@@ -72,7 +77,7 @@ module.exports = [
         },
       ],
     },
-    plugins: [],
+    plugins: [new Dotenv()],
     devtool: "source-map",
   },
 ];

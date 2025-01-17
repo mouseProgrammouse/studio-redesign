@@ -4,8 +4,9 @@
 :root {
   --primary-color: #e4b381;
   --font-color: #111;
-  --secondar-font-color: #fff;
+  --secondary-font-color: #fff;
   --icon-color: #d9d9d9;
+  --footer-color: #2a2422;
   --size-half: 4px;
   --size: 8px;
   --size-x2: 16px;
@@ -44,7 +45,7 @@ main {
   align-items: center;
   flex-flow: column;
   display: flex;
-  padding: 12px 68px;
+  padding: 12px 68px 0;
 }
 
 body {
@@ -63,7 +64,7 @@ a.button,
 button {
   padding: var(--size) 68px;
   border: 1px solid var(--primary-color);
-  background-color: var(--secondar-font-color);
+  background-color: var(--secondary-font-color);
   border-radius: 10px;
   font-size: 14px;
 }
@@ -71,7 +72,7 @@ button {
 a.button:hover,
 button:hover {
   background-color: var(--primary-color);
-  color: var(--secondar-font-color);
+  color: var(--secondary-font-color);
 }
 
 .menu {
@@ -213,10 +214,95 @@ nav ul a:hover {
   font-weight: 700;
 }
 
-.hero-slider-container {
+.hero-slider-container,
+.reviews .slider-container {
   width: 100vw;
   max-width: 1215px;
   margin: auto;
+}
+
+section.reviews {
+  margin-top: 60px;
+}
+
+.reviews h2 {
+  text-align: center;
+  margin-bottom: var(--size);
+  line-height: inherit;
+}
+
+.reviews .slider-container .slide {
+  background-color: #f4f2f1;
+}
+
+.reviews .slider-container .slick-slide {
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: white;
+  transition: all 0.3s ease;
+  height: auto;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.reviews .slider-container .slick-slide.slick-current {
+  opacity: 1;
+}
+
+.reviews .slider-container .slick-current .slide,
+.reviews .slider-container .slick-center .slide {
+  padding: 50px 0px;
+  background-color: #f4f2f1;
+}
+
+.reviews .slick-slide > div {
+  padding: 0 var(--size);
+}
+
+.reviews .comment,
+.reviews .slide-top {
+  padding: 0 35px;
+}
+
+.reviews .slide-top {
+  padding-top: 30px;
+}
+
+.reviews .slick-current .slide-top {
+  padding-top: 0;
+}
+
+.reviews .comment {
+  padding-bottom: 30px;
+}
+
+.reviews .slick-current .comment {
+  padding-bottom: 0;
+}
+
+.reviews .slide-top {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.reviews .author {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reviews .author p {
+  text-align: start;
+  padding: 0 var(--size);
+}
+
+.reviews .slide-top .author img {
+  width: 58px;
+  height: 58px;
+  border-radius: 29px;
 }
 
 .hero-slider-container .slide img {
@@ -294,6 +380,44 @@ section.services img {
 
 section.services .services-description {
   display: none;
+}
+
+.map {
+  width: 100vw;
+  max-width: 1215px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.map iframe {
+  border: 0;
+}
+
+footer {
+  background-color: var(--footer-color);
+}
+
+footer div.container {
+  max-width: 924px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+}
+
+footer p {
+  color: var(--secondary-font-color);
+}
+
+footer p br {
+  padding-bottom: var(--size);
+}
+
+@media screen and (min-width: 924px) {
+  .reviews .slider-container {
+    width: 100%;
+  }
 }
 
 /*
@@ -386,6 +510,10 @@ section.services .services-description {
 
   section.services .services-description {
     display: block;
+  }
+
+  section.reviews {
+    margin-top: 120px;
   }
 }
 
