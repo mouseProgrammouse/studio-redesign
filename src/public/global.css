@@ -243,16 +243,26 @@ section.reviews {
   transition: all 0.3s ease;
   height: auto;
   text-align: center;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 .reviews .slider-container .slick-slide.slick-current {
   opacity: 1;
 }
 
+.reviews .slider-container .slide,
+.reviews .slider-container .slide {
+  padding: 0px 0px;
+  margin: 50px 0px;
+  transition: all 0.3s ease;
+  background-color: #f4f2f1;
+}
+
 .reviews .slider-container .slick-current .slide,
 .reviews .slider-container .slick-center .slide {
   padding: 50px 0px;
+  margin: 0px 0px;
+  transition: all 0.3s ease;
   background-color: #f4f2f1;
 }
 
@@ -391,9 +401,20 @@ section.services .services-description {
 
 .map iframe {
   border: 0;
+  margin-bottom: -8px;
+}
+
+.comment p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 4lh;
+  text-align: left;
 }
 
 footer {
+  min-width: 100vw;
   background-color: var(--footer-color);
 }
 
@@ -404,6 +425,7 @@ footer div.container {
   justify-content: space-between;
   margin: 0 auto;
   align-items: center;
+  padding: 0 var(--size-x2);
 }
 
 footer p {
@@ -558,5 +580,9 @@ footer p br {
 
   section.services {
     margin-top: 60px;
+  }
+
+  footer div.container {
+    padding: 0;
   }
 }
