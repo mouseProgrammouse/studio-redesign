@@ -45,3 +45,5 @@ export const reviews: Review[] = [
     createTime: "23/03/2022",
   },
 ];
+
+export const supportedLang: string[] = ["ru", "uk"];
