@@ -666,7 +666,7 @@ footer p br {
     display: block;
   }
 
-  footer .mobile {
+  footer .mobile.logo {
     display: none;
   }
 }

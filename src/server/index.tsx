@@ -34,6 +34,11 @@ app.get("*", (req, res) => {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta property="og:image" content="/img/ogImg.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:title" content="${i18n.t("ogTitle")}" />
+        <meta property="og:description" content="${i18n.t("ogDescription")}" />
         <title>${i18n.t("mainTitle")}</title>
         <link rel="icon" href="data:," />
         <link rel="stylesheet" type="text/css" href="${cssFile}" />

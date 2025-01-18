@@ -13,12 +13,14 @@ const ContactUS: React.FC = () => {
           <a
             className="viber"
             href={`viber://contact?number=%2B${t("contactUsViber")}`}
+            aria-label={t("a11yContactUsViber")}
           >
             <img src="/img/viber.svg" />
           </a>
           <a
             className="whatsapp"
             href={`https://api.whatsapp.com/send?phone=${t("contactUsWhatsApp")}`}
+            aria-label={t("a11yContactUsWhatsUp")}
           >
             <img src="/img/whatsUp.svg" />
           </a>
