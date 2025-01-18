@@ -8,11 +8,10 @@ const Footer: React.FC = () => {
     <footer>
       <div className="container">
         <p dangerouslySetInnerHTML={{ __html: t("studioAddress") }}></p>
-        <div>
-          <img src="/img/logo.png" />
-        </div>
+        <img className="logo desktop" src="/img/logo.png" />
         <p dangerouslySetInnerHTML={{ __html: t("studioContacts") }}></p>
       </div>
+      <img className="logo mobile" src="/img/logo.png" />
     </footer>
   );
 };

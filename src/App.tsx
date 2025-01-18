@@ -7,6 +7,7 @@ import OurServices from "./components/OurServices";
 import Map from "./components/Map";
 import Footer from "./components/Footer";
 import Reviews from "./components/Reviews";
+import ContactUS from "./components/ContactUs";
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
         <AboutUs />
         <OurServices />
         <Reviews />
+        <ContactUS />
         <Map />
         <Footer />
       </div>
