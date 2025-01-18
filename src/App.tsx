@@ -4,6 +4,9 @@ import HeroSection from "./components/HeroSection";
 import HeroCarousel from "./components/HeroCarousel";
 import AboutUs from "./components/AboutUs";
 import OurServices from "./components/OurServices";
+import Map from "./components/Map";
+import Footer from "./components/Footer";
+import Reviews from "./components/Reviews";
 
 const App: React.FC = () => {
   return (
@@ -14,6 +17,9 @@ const App: React.FC = () => {
         <HeroCarousel />
         <AboutUs />
         <OurServices />
+        <Reviews />
+        <Map />
+        <Footer />
       </div>
     </>
   );

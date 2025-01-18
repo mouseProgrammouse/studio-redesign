@@ -6,7 +6,7 @@
   "servicesTitle": "uk - Услуги нашего ателье",
   "servicesIndividTitle": "uk - Индивидуальный пошив",
   "servicesOptTitle": "uk - Отшив оптовых заказов",
-  "servicesRepairTitle": "uk - Мелкий ремонт трикотажа",
+  "servicesRepairTitle": "uk - Мелкий ремонт одежды",
   "servicesIndividDescription": "uk - В нашем ателье можно заказать крупные (свитеры, платья) и компактные (шапки, шарфы) трикотажные изделия по вашему дизайну.",
   "servicesOptDescription": "uk - Наше ателье также занимается оптовым изготовлением вязаных элементов униформы — от школьных жилетов до головных уборов для военных и многого другого.",
   "servicesRepairDescription": "uk - Ателье предоставляет широкий спектр услуг по ремонту одежды: подгонка, штопка, укорачивание, изготовление вязаных деталей и многое другое.",
@@ -23,5 +23,8 @@
   "menuItemAboutUs": "uk - о нас",
   "menuItemServices": "uk - услуги",
   "menuItemReviews": "uk - отзывы",
-  "menuItemContactUs": "uk - контакты"
+  "reviewsTitle": "Отзывы клиентов",
+  "menuItemContactUs": "uk - контакты",
+  "studioAddress": "uk - ул. Благовисна 144,<br/>г.Черкассы",
+  "studioContacts": "uk - тел: (073) 133-2930<br/>Татьяна"
 }
