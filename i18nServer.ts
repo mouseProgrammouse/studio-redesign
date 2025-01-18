@@ -23,7 +23,7 @@ i18n
     ns: ["translation"],
     defaultNS: "translation",
     backend: {
-      loadPath: path.join(__dirname, "../src/locales/{{lng}}/{{ns}}.json"),
+      loadPath: path.join(__dirname, "locales/{{lng}}/{{ns}}.json"),
     },
     interpolation: {
       escapeValue: false, // React already prevents XSS attacks

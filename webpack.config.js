@@ -37,7 +37,10 @@ module.exports = [
     },
     plugins: [
       new CopyPlugin({
-        patterns: [{ from: "src/public", to: "public" }],
+        patterns: [
+          { from: "src/public", to: "public" },
+          { from: "src/locales", to: "locales" },
+        ],
       }),
     ],
     watchOptions: {
