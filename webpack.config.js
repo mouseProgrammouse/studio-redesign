@@ -20,7 +20,6 @@ module.exports = [
     name: "server",
     entry: "./src/server/index.tsx",
     target: "node",
-    mode: "development", // Change to 'production' for production builds
     externals: [nodeExternals()],
     output: {
       path: path.resolve(__dirname, "dist"),
@@ -41,7 +40,6 @@ module.exports = [
         patterns: [{ from: "src/public", to: "public" }],
       }),
     ],
-    watch: true,
     watchOptions: {
       aggregateTimeout: 300,
       poll: 1000,
@@ -52,7 +50,6 @@ module.exports = [
     name: "client",
     entry: "./src/client/index.tsx",
     target: "web",
-    mode: "development", // Use 'production' for production builds
     output: {
       filename: "bundle.js",
       path: path.resolve(__dirname, "src/public"),

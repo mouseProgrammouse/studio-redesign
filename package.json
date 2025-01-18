@@ -5,20 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run minify:css && webpack --config webpack.config.mjs",
+    "build": "npm run build:client && npm run build:server",
     "start": "node dist/server.js",
-    "minify:css": "clean-css public/css/global.css -o public/css/global.min.css",
+    "minify:css": "cleancss -o src/public/global.min.css src/public/global.css",
     "start-dev": "nodemon dist/server.js",
-    "build:client": "webpack --config webpack.config.js --config-name client",
-    "build:server": "webpack --config webpack.config.js --config-name server",
-    "dev:server": "webpack --config webpack.config.js --config-name server --watch",
-    "dev:client": "webpack --config webpack.config.js --config-name client  --watch",
+    "build:client": "webpack --config webpack.config.js --mode=production --config-name client ",
+    "build:server": "npm run minify:css && webpack --config webpack.config.js --mode=production --config-name server",
+    "dev:server": "webpack --config webpack.config.js --config-name server --mode=development --watch",
+    "dev:client": "webpack --config webpack.config.js --config-name client --mode=development  --watch",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "npx prettier . --check",
     "format:fix": "npx prettier . --write",
-    "lint-staged": "lint-staged",
-    "prepare": "husky"
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
@@ -35,7 +34,6 @@
   "dependencies": {
     "@types/react-slick": "^0.23.13",
     "classnames": "^2.5.1",
-    "clean-css": "^5.3.3",
     "express": "^4.21.2",
     "i18next": "^24.2.1",
     "i18next-fs-backend": "^2.6.0",
@@ -57,6 +55,7 @@
     "@types/react-dom": "^19.0.2",
     "@types/react-i18next": "^8.1.0",
     "babel-loader": "^9.2.1",
+    "clean-css-cli": "^5.6.3",
     "copy-webpack-plugin": "^12.0.2",
     "dotenv": "^16.4.7",
     "dotenv-webpack": "^8.1.0",

@@ -19,6 +19,7 @@ jspm_packages/
 dist/
 build/
 src/public/*.js*
+src/public/*.min.css
 
 # Static files (if dynamically generated)
 *.cache
