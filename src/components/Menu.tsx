@@ -10,8 +10,8 @@ const Menu: React.FC = () => {
   const menuItems = [
     { key: "menuItemAboutUs", href: "#AboutUs" },
     { key: "menuItemServices", href: "#Services" },
-    { key: "menuItemReviews", href: "…" },
-    { key: "menuItemContactUs", href: "…" },
+    { key: "menuItemReviews", href: "#Reviews" },
+    { key: "menuItemContactUs", href: "#ContactUs" },
   ];
 
   return (

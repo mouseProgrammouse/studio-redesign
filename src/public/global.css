@@ -405,6 +405,41 @@ section.services .services-description {
   display: none;
 }
 
+section.contact-us {
+  min-width: 304px;
+  margin: var(--size) auto var(--size-x5);
+  max-width: 686px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 var(--size-x3);
+}
+
+section.contact-us h2 {
+  margin-bottom: 0;
+}
+
+.apps {
+  display: flex;
+  justify-content: center;
+}
+
+.apps a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--size);
+  text-align: center;
+  justify-content: center;
+  margin: 0 var(--size-half);
+}
+
+.apps a img {
+  width: var(--size-x4);
+}
+
 .map {
   width: 100vw;
   max-width: 1215px;
@@ -429,6 +464,20 @@ section.services .services-description {
 footer {
   min-width: 100vw;
   background-color: var(--footer-color);
+}
+
+footer .logo {
+  display: block;
+  margin: 0 auto;
+}
+
+footer .mobile.logo {
+  display: block;
+  padding-bottom: var(--size-x4);
+}
+
+footer .desktop {
+  display: none;
 }
 
 footer div.container {
@@ -559,6 +608,11 @@ footer p br {
   .reviews .mobile-author {
     display: none;
   }
+
+  section.contact-us h2 {
+    margin-bottom: 0;
+    margin-top: 70px;
+  }
 }
 
 /* 
@@ -606,5 +660,13 @@ footer p br {
 
   footer div.container {
     padding: 0;
+  }
+
+  footer .desktop {
+    display: block;
+  }
+
+  footer .mobile {
+    display: none;
   }
 }
