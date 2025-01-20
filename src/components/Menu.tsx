@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import HamburgerMenuIcon from "./HamburgerMenuIcon";
 import classNames from "classnames";
+import { supportedLang } from "../utils/data";
 
 const Menu: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -27,15 +28,15 @@ const Menu: React.FC = () => {
             </li>
           ))}
           <li aria-label={t("a11ylngSwitcherLabel")} className="lng-selector">
-            {i18n.languages.map((lang) => (
+            {supportedLang.map((lng) => (
               <a
-                key={lang}
-                href={lang}
-                className={classNames({ active: i18n.language === lang })}
-                aria-label={t(`a11ylngSwitcher${lang.toUpperCase()}`)}
+                key={lng}
+                href={lng}
+                className={classNames({ active: i18n.language === lng })}
+                aria-label={t(`a11ylngSwitcher${lng.toUpperCase()}`)}
                 role="menuitem"
               >
-                {t(lang)}
+                {t(lng)}
               </a>
             ))}
           </li>
@@ -56,16 +57,16 @@ const Menu: React.FC = () => {
             </li>
           ))}
           <li aria-label={t("a11ylngSwitcherLabel")} className="lng-selector">
-            {i18n.languages.map((lang) => (
+            {supportedLang.map((lng) => (
               <a
-                key={lang}
-                href={lang}
-                className={classNames({ active: lang === i18n.language })}
-                aria-label={t(`a11ylngSwitcher${lang.toUpperCase()}`)}
+                key={lng}
+                href={lng}
+                className={classNames({ active: lng === i18n.language })}
+                aria-label={t(`a11ylngSwitcher${lng.toUpperCase()}`)}
                 role="menuitem"
                 onClick={() => setIsOpen(false)}
               >
-                {t(lang)}
+                {t(lng)}
               </a>
             ))}
           </li>

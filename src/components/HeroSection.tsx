@@ -8,7 +8,12 @@ const HeroSection: React.FC = () => {
     <section className="hero">
       <h1>{t("heroTitle")}</h1>
       <p>{t("heroDescription")}</p>
-      <a className="button" role="button" aria-label={t("a11yCTALabel")}>
+      <a
+        className="button"
+        role="button"
+        aria-label={t("a11yCTALabel")}
+        href="#ContactUs"
+      >
         {t("ctaTitle")}
       </a>
     </section>

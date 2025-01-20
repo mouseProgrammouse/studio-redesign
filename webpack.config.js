@@ -20,7 +20,6 @@ module.exports = [
     name: "server",
     entry: "./src/server/index.tsx",
     target: "node",
-    mode: "development", // Change to 'production' for production builds
     externals: [nodeExternals()],
     output: {
       path: path.resolve(__dirname, "dist"),
@@ -38,10 +37,12 @@ module.exports = [
     },
     plugins: [
       new CopyPlugin({
-        patterns: [{ from: "src/public", to: "public" }],
+        patterns: [
+          { from: "src/public", to: "public" },
+          { from: "src/locales", to: "locales" },
+        ],
       }),
     ],
-    watch: true,
     watchOptions: {
       aggregateTimeout: 300,
       poll: 1000,
@@ -52,7 +53,6 @@ module.exports = [
     name: "client",
     entry: "./src/client/index.tsx",
     target: "web",
-    mode: "development", // Use 'production' for production builds
     output: {
       filename: "bundle.js",
       path: path.resolve(__dirname, "src/public"),
