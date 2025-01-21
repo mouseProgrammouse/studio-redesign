@@ -34,11 +34,26 @@ app.get("*", (req, res) => {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="alternate" hreflang="uk" href="https://${i18n.t("domain")}/ua" />
+        <link rel="alternate" hreflang="ru" href="https://${i18n.t("domain")}/ru" />
+        <link rel="alternate" hreflang="x-default" href="https://${i18n.t("domain")}/ua" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="description"
+          content="${i18n.t("mainDescription")}"
+        />
+        <meta property="og:type" content="website" />
         <meta property="og:image" content="/img/ogImg.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:title" content="${i18n.t("ogTitle")}" />
         <meta property="og:description" content="${i18n.t("ogDescription")}" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="https://${i18n.t("domain")}/ua">
+        <meta name="twitter:title" content="${i18n.t("ogTitle")}" />
+        <meta name="twitter:description" content="${i18n.t("ogDescription")}" />
+        <meta name="twitter:image:src" content="/img/ogImg.png" />
         <title>${i18n.t("mainTitle")}</title>
         <link rel="icon" href="data:," />
         <link rel="stylesheet" type="text/css" href="${cssFile}" />
@@ -53,6 +68,8 @@ app.get("*", (req, res) => {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
         />
+        <link rel="icon" href="/img/logo.png" />
+        <link rel="apple-touch-icon" href="/img/logo.png" /> 
         <script>
           window.initialI18nStore = ${JSON.stringify(initialI18nStore)};
           window.initialLanguage = "${initialLanguage}";

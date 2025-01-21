@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /ua
+Allow: /ru
+Sitemap: http://trikotag.ck.ua/sitemap.xml
