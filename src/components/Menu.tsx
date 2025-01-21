@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import HamburgerMenuIcon from "./HamburgerMenuIcon";
 import classNames from "classnames";
 import { supportedLang } from "../utils/data";
+import { sendEvent } from "../utils/analytics";
+import { EventTypes } from "../utils/analytics";
 
 const Menu: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -24,7 +26,14 @@ const Menu: React.FC = () => {
         <ul role="menubar">
           {menuItems.map(({ key, href }) => (
             <li key={key} role="menuitem">
-              <a href={href}>{t(key)}</a>
+              <a
+                href={href}
+                onClick={() =>
+                  sendEvent(EventTypes.MENU_CLICKED, { menuitem: t(key) })
+                }
+              >
+                {t(key)}
+              </a>
             </li>
           ))}
           <li aria-label={t("a11ylngSwitcherLabel")} className="lng-selector">
@@ -35,6 +44,9 @@ const Menu: React.FC = () => {
                 className={classNames({ active: i18n.language === lng })}
                 aria-label={t(`a11ylngSwitcher${lng.toUpperCase()}`)}
                 role="menuitem"
+                onClick={() =>
+                  sendEvent(EventTypes.LNG_CLICKED, { language: lng })
+                }
               >
                 {t(lng)}
               </a>
@@ -51,7 +63,14 @@ const Menu: React.FC = () => {
         >
           {menuItems.map(({ key, href }) => (
             <li key={key}>
-              <a href={href} role="menuitem" onClick={() => setIsOpen(false)}>
+              <a
+                href={href}
+                role="menuitem"
+                onClick={() => {
+                  sendEvent(EventTypes.MENU_CLICKED, { menuitem: t(key) });
+                  setIsOpen(false);
+                }}
+              >
                 {t(key)}
               </a>
             </li>
@@ -64,7 +83,10 @@ const Menu: React.FC = () => {
                 className={classNames({ active: lng === i18n.language })}
                 aria-label={t(`a11ylngSwitcher${lng.toUpperCase()}`)}
                 role="menuitem"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  sendEvent(EventTypes.LNG_CLICKED, { language: lng });
+                  setIsOpen(false);
+                }}
               >
                 {t(lng)}
               </a>

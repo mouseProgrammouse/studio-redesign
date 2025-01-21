@@ -1,5 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { EventTypes } from "../utils/analytics";
+import { sendEvent } from "../utils/analytics";
 
 const ContactUS: React.FC = () => {
   const { t } = useTranslation();
@@ -14,6 +16,7 @@ const ContactUS: React.FC = () => {
             className="viber"
             href={`viber://contact?number=%2B${t("contactUsViber")}`}
             aria-label={t("a11yContactUsViber")}
+            onClick={() => sendEvent(EventTypes.VIBER_CLICKED)}
           >
             <img src="/img/viber.svg" />
           </a>
@@ -21,6 +24,7 @@ const ContactUS: React.FC = () => {
             className="whatsapp"
             href={`https://api.whatsapp.com/send?phone=${t("contactUsWhatsApp")}`}
             aria-label={t("a11yContactUsWhatsUp")}
+            onClick={() => sendEvent(EventTypes.WHATSUP_CLICKED)}
           >
             <img src="/img/whatsUp.svg" />
           </a>

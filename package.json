@@ -54,6 +54,7 @@
     "@babel/preset-typescript": "^7.26.0",
     "@eslint/compat": "^1.2.4",
     "@types/express": "^5.0.0",
+    "@types/gtag.js": "^0.0.20",
     "@types/react": "^19.0.4",
     "@types/react-dom": "^19.0.2",
     "@types/react-i18next": "^8.1.0",
