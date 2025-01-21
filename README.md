@@ -28,37 +28,37 @@ Ensure you have the following installed on your system:
 ### Development
 
 Start the server in development mode with automatic reloads using nodemon.
-`npm run start-dev`
+ ```npm run start-dev ```
 
 Watch for changes in the client-side code.
-`npm run dev:client`
+ ```npm run dev:client ```
 
 Watch for changes in the server-side code.
-`npm run dev:server`
+ ```npm run dev:server ```
 
 ### Build
 
 Build the entire project (minify CSS and bundle the code using Webpack).
-`npm run build`
+ ```npm run build ```
 
 Build the client-side code.
-`npm run build:client`
+ ```npm run build:client ```
 
 Build the server-side code.
-`npm run build:server`
+ ```npm run build:server ```
 
 Minify global CSS:
-`npm run minify:css`
+ ```npm run minify:css ```
 
 ### Production
 
 Prepare the project for deployment:
 
-`npm run build:prepare`
+ ```npm run build:prepare ```
 
 Start the server in production mode:
 
-`npm run run:prod`
+ ```npm run run:prod ```
 
 ## Technologies Used
 
