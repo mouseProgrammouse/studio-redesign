@@ -69,7 +69,16 @@ app.get("*", (req, res) => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
         />
         <link rel="icon" href="/img/logo.png" />
-        <link rel="apple-touch-icon" href="/img/logo.png" /> 
+        <link rel="apple-touch-icon" href="/img/logo.png" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id='${process.env.REACT_APP_G_TAG_ID}'"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+      
+          gtag('config', '${process.env.REACT_APP_G_TAG_ID}');
+        </script>
         <script>
           window.initialI18nStore = ${JSON.stringify(initialI18nStore)};
           window.initialLanguage = "${initialLanguage}";
