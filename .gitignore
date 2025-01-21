@@ -18,6 +18,7 @@ jspm_packages/
 # Build outputs
 dist/
 build/
+build*
 src/public/*.js*
 src/public/*.min.css
 

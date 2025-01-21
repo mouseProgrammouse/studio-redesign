@@ -47,6 +47,19 @@ Build the client-side code.
 Build the server-side code.
 `npm run build:server`
 
+Minify global CSS:
+`npm run minify:css`
+
+### Production
+
+Prepare the project for deployment:
+
+`npm run build:prepare`
+
+Start the server in production mode:
+
+`npm run run:prod`
+
 ## Technologies Used
 
 React(Frontend) + Express.js(Backend) + i18next(Internationalization)

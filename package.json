@@ -48,7 +48,6 @@
     "react-slick": "^0.30.3"
   },
   "devDependencies": {
-    "@axe-core/react": "^4.10.1",
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.26.3",
