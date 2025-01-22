@@ -53,3 +53,6 @@ coverage/
 
 #env
 .env
+
+# nginx config
+nginx.*
