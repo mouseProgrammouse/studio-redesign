@@ -460,7 +460,7 @@ section.contact-us h2 {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  height: 4lh;
+  height: 10lh;
   text-align: left;
 }
 
@@ -675,5 +675,13 @@ footer p br {
 
   footer .mobile.logo {
     display: none;
+  }
+
+  .comment p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 4lh;
   }
 }

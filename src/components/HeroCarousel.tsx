@@ -32,7 +32,9 @@ const HeroCarousel: React.FC = () => {
 
   const SLides = Array.from({ length: AMOUNT_OF_SLIDES }, (_, index) => ({
     img: `/img/slide${index + 1}.png`,
-    description: t(`slideDescription${index < 10 ? `0${index}` : index}`),
+    description: t(
+      `slideDescription${index < 10 ? `0${index + 1}` : index + 1}`,
+    ),
   }));
 
   return (
