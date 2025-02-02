@@ -456,12 +456,13 @@ section.contact-us h2 {
 }
 
 .comment p {
-  display: -webkit-box;
+  display: block;
+  text-overflow: ellipsis;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  height: 10lh;
   text-align: left;
+  height: 11lh;
 }
 
 footer {
@@ -477,6 +478,14 @@ footer .logo {
 footer .mobile.logo {
   display: block;
   padding-bottom: var(--size-x4);
+}
+
+footer .phone {
+  color: var(--secondary-font-color);
+}
+
+footer p.contact {
+  text-align: end;
 }
 
 footer .desktop {
