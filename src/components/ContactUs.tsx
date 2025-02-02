@@ -10,7 +10,7 @@ const ContactUS: React.FC = () => {
     <section className="contact-us" id="ContactUs">
       <h2>{t("contactUsTitle")}</h2>
       <div className="container">
-        <p dangerouslySetInnerHTML={{ __html: t("contactUsDesscription") }}></p>
+        <p dangerouslySetInnerHTML={{ __html: t("contactUsDescription") }}></p>
         <div className="apps">
           <a
             className="viber"

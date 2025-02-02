@@ -501,6 +501,13 @@ footer p br {
   padding-bottom: var(--size);
 }
 
+.phone {
+  white-space: nowrap;
+  color: var(--font-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
 *:focus {
   outline: 1px solid var(--primary-color);
 }
