@@ -63,7 +63,7 @@ const Reviews: React.FC = () => {
                   <span>5/{review.starRating}</span>
                 </div>
                 <div className="mobile-author">
-                  <img src={review.profilePhotoUrl} />
+                  <img src={review.profilePhotoUrl} alt="" />
                   <p>
                     <span>{review.reviewerName}</span>
                     <br />
