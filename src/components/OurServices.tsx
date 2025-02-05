@@ -32,7 +32,7 @@ const OurServices: React.FC = () => {
       <ul>
         {services.map((item) => (
           <li key={item.key}>
-            <img src={item.imgSrc} />
+            <img src={item.imgSrc} alt="" />
             <h3>{t(item.title)}</h3>
             <p>{t(item.description)}</p>
           </li>

@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           dangerouslySetInnerHTML={{ __html: t("studioContacts") }}
         ></p>
       </div>
-      <img className="logo mobile" src="/img/logo.png" />
+      <img className="logo mobile" src="/img/logo.png" alt="" />
     </footer>
   );
 };
