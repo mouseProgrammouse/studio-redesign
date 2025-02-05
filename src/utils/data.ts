@@ -46,4 +46,4 @@ export const reviews: Review[] = [
   },
 ];
 
-export const supportedLang: string[] = ["ru", "ua"];
+export const supportedLang: string[] = ["ru", "uk"];
