@@ -9,7 +9,7 @@
     "start": "node dist/server.js",
     "minify:css": "cleancss -o src/public/global.min.css src/public/global.css",
     "start-dev": "nodemon dist/server.js",
-    "build:prepare": "npm run build && npm run archive",
+    "build:prepare": "rm -f build.tar.gz && npm run build && npm run archive",
     "run:prod": "npm run build && npm ci --production --ignore-scripts && node dist/server.js",
     "archive": "tar -czf build.tar.gz dist package.json package-lock.json .env",
     "build:client": "webpack --config webpack.config.js --mode=production --config-name client ",
