@@ -52,7 +52,7 @@ const Reviews: React.FC = () => {
             <div className="slide" key={`review-${index}`}>
               <div className="slide-top">
                 <div className="desktop-author">
-                  <img src={review.profilePhotoUrl} />
+                  <img src={review.profilePhotoUrl} alt="" />
                   <p>
                     <span>{review.reviewerName}</span>
                     <br />

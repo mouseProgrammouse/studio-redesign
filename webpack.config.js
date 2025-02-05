@@ -40,7 +40,6 @@ module.exports = [
         patterns: [
           { from: "src/public", to: "public" },
           { from: "src/locales", to: "locales" },
-          { from: "robot.txt", to: "robot.txt" },
         ],
       }),
     ],
