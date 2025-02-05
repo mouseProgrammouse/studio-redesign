@@ -17,7 +17,7 @@ const HamburgerMenuIcon: React.FC<HamburgerMenuIconProps> = ({
     <div
       className={classNames({ "hamburger-menu": true, "is-active ": isOpen })}
       onClick={() => onClick()}
-      tabIndex={1}
+      tabIndex={0}
       aria-label={isOpen ? t("a11yCloseMenu") : t("a11yOpenMenu")}
       role="button"
     >

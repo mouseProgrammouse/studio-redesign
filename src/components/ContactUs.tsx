@@ -18,7 +18,7 @@ const ContactUS: React.FC = () => {
             aria-label={t("a11yContactUsViber")}
             onClick={() => sendEvent(EventTypes.VIBER_CLICKED)}
           >
-            <img src="/img/viber.svg" />
+            <img src="/img/viber.svg" alt="" />
           </a>
           <a
             className="whatsapp"
@@ -26,7 +26,7 @@ const ContactUS: React.FC = () => {
             aria-label={t("a11yContactUsWhatsUp")}
             onClick={() => sendEvent(EventTypes.WHATSUP_CLICKED)}
           >
-            <img src="/img/whatsUp.svg" />
+            <img src="/img/whatsUp.svg" alt="" />
           </a>
         </div>
       </div>
