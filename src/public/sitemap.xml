@@ -6,21 +6,21 @@
         <loc>https://trikotag.ck.ua/</loc>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://trikotag.ck.ua/" />
         <xhtml:link rel="alternate" hreflang="ru" href="https://trikotag.ck.ua/ru" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://trikotag.ck.ua/ua" />
+        <xhtml:link rel="alternate" hreflang="ua" href="https://trikotag.ck.ua/ua" />
     </url>
 
     <url>
         <loc>https://trikotag.ck.ua/ru</loc>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://trikotag.ck.ua/" />
         <xhtml:link rel="alternate" hreflang="ru" href="https://trikotag.ck.ua/ru" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://trikotag.ck.ua/ua" />
+        <xhtml:link rel="alternate" hreflang="ua" href="https://trikotag.ck.ua/ua" />
     </url>
 
     <url>
         <loc>https://trikotag.ck.ua/ua</loc>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://trikotag.ck.ua/" />
         <xhtml:link rel="alternate" hreflang="ru" href="https://trikotag.ck.ua/ru" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://trikotag.ck.ua/ua" />
+        <xhtml:link rel="alternate" hreflang="ua" href="https://trikotag.ck.ua/ua" />
     </url>
 
 </urlset>

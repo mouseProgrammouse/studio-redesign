@@ -17,9 +17,9 @@ i18n
       lookupPath: "",
       localeDetection: false,
     },
-    fallbackLng: "uk",
-    preload: ["uk", "ru"],
-    supportedLngs: ["uk", "ru"],
+    fallbackLng: "ua",
+    preload: ["ua", "ru"],
+    supportedLngs: ["ua", "ru"],
     ns: ["translation"],
     defaultNS: "translation",
     backend: {

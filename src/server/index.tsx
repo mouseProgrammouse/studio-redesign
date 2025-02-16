@@ -34,7 +34,7 @@ app.get("*", (req, res) => {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="alternate" hreflang="uk" href="https://${i18n.t("domain")}/ua" />
+        <link rel="alternate" hreflang="ua" href="https://${i18n.t("domain")}/ua" />
         <link rel="alternate" hreflang="ru" href="https://${i18n.t("domain")}/ru" />
         <link rel="alternate" hreflang="x-default" href="https://${i18n.t("domain")}/ua" />
         <meta name="robots" content="index, follow" />
