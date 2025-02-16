@@ -4,6 +4,7 @@ export enum EventTypes {
   VIBER_CLICKED = "viber_clicked",
   WHATSUP_CLICKED = "whatsup_clicked",
   LNG_CLICKED = "swithc_language_clicked",
+  PHONE_CLICKED = "phone_clicked",
 }
 
 export const sendEvent = (

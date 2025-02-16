@@ -2,9 +2,30 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { EventTypes } from "../utils/analytics";
 import { sendEvent } from "../utils/analytics";
+import { useEffect } from "react";
 
 const ContactUS: React.FC = () => {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const phoneLink = document
+      .getElementById("ContactUs")
+      ?.querySelector("a.phone");
+
+    const handlePhoneClick = () => {
+      sendEvent(EventTypes.PHONE_CLICKED);
+    };
+
+    if (phoneLink) {
+      phoneLink.addEventListener("click", handlePhoneClick);
+    }
+
+    return () => {
+      if (phoneLink) {
+        phoneLink.removeEventListener("click", handlePhoneClick);
+      }
+    };
+  }, []);
 
   return (
     <section className="contact-us" id="ContactUs">
