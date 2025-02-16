@@ -31,7 +31,8 @@ const HeroCarousel: React.FC = () => {
   };
 
   const SLides = Array.from({ length: AMOUNT_OF_SLIDES }, (_, index) => ({
-    img: `/img/slide${index + 1}.png`,
+    img: `/img/webp/slide${index + 1}.webp`,
+    imgFallback: `/img/slide${index + 1}.png`,
     description: t(
       `slideDescription${index < 10 ? `0${index + 1}` : index + 1}`,
     ),
@@ -42,7 +43,10 @@ const HeroCarousel: React.FC = () => {
       <Slider {...settings}>
         {SLides.map((slide, index) => (
           <div className="slide" key={`${slide.img}-${index}`}>
-            <img src={slide.img} alt={slide.description} />
+            <picture>
+              <source srcSet={slide.img} type="image/webp" />
+              <img src={slide.imgFallback} alt={slide.description} />
+            </picture>
           </div>
         ))}
       </Slider>

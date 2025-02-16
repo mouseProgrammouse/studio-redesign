@@ -459,6 +459,7 @@ section.contact-us h2 {
   display: block;
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
+  line-clamp: 11;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-align: left;
@@ -696,6 +697,7 @@ footer p br {
   .comment p {
     display: -webkit-box;
     -webkit-line-clamp: 4;
+    line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     height: 4lh;
