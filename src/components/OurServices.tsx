@@ -18,7 +18,7 @@ const OurServices: React.FC = () => {
     (acc: Array<Services>, serviceType: string) => {
       acc.push({
         imgSrc: `/img/service${serviceType}.png`,
-        imgFallback: `/img/service${serviceType}.webp`,
+        imgFallback: `/img/webp/service${serviceType}.webp`,
         title: `services${serviceType}Title`,
         description: `services${serviceType}Description`,
         key: serviceType,
