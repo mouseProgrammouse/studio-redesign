@@ -63,11 +63,6 @@ app.get("*", (req, res) => {
           charset="UTF-8"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
         />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-        />
         <link rel="icon" href="/img/logo.png" />
         <link rel="apple-touch-icon" href="/img/logo.png" />
         <!-- Google tag (gtag.js) -->
@@ -82,7 +77,7 @@ app.get("*", (req, res) => {
         <script>
           window.initialI18nStore = ${JSON.stringify(initialI18nStore)};
           window.initialLanguage = "${initialLanguage}";
-      </script>
+        </script>
       </head>
       <body>
         <main>${appString}</main>
