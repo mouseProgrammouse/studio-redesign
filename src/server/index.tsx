@@ -34,9 +34,9 @@ app.get("*", (req, res) => {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="alternate" hreflang="ua" href="https://${i18n.t("domain")}/ua" />
-        <link rel="alternate" hreflang="ru" href="https://${i18n.t("domain")}/ru" />
-        <link rel="alternate" hreflang="x-default" href="https://${i18n.t("domain")}/ua" />
+        <link rel="alternate" hreflang="uk" href="https://${process.env.REACT_APP_DOMAIN}/uk" />
+        <link rel="alternate" hreflang="ru" href="https://${process.env.REACT_APP_DOMAIN}/ru" />
+        <link rel="alternate" hreflang="x-default" href="https://${process.env.REACT_APP_DOMAIN}" />
         <meta name="robots" content="index, follow" />
         <meta
           name="description"
@@ -63,11 +63,6 @@ app.get("*", (req, res) => {
           charset="UTF-8"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
         />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-        />
         <link rel="icon" href="/img/logo.png" />
         <link rel="apple-touch-icon" href="/img/logo.png" />
         <!-- Google tag (gtag.js) -->
@@ -82,7 +77,7 @@ app.get("*", (req, res) => {
         <script>
           window.initialI18nStore = ${JSON.stringify(initialI18nStore)};
           window.initialLanguage = "${initialLanguage}";
-      </script>
+        </script>
       </head>
       <body>
         <main>${appString}</main>
