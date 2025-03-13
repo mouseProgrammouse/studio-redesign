@@ -25,8 +25,9 @@ const Menu: React.FC = () => {
       <div className="desktop-menu">
         <ul role="menubar">
           {menuItems.map(({ key, href }) => (
-            <li key={key} role="menuitem">
+            <li key={key}>
               <a
+                role="menuitem"
                 href={href}
                 onClick={() =>
                   sendEvent(EventTypes.MENU_CLICKED, { menuitem: t(key) })
@@ -36,14 +37,18 @@ const Menu: React.FC = () => {
               </a>
             </li>
           ))}
-          <li aria-label={t("a11ylngSwitcherLabel")} className="lng-selector">
+          <li
+            aria-label={t("a11ylngSwitcherLabel")}
+            className="lng-selector"
+            role="group"
+          >
             {supportedLang.map((lng) => (
               <a
                 key={lng}
                 href={lng}
+                role="menuitem"
                 className={classNames({ active: i18n.language === lng })}
                 aria-label={t(`a11ylngSwitcher${lng.toUpperCase()}`)}
-                role="menuitem"
                 onClick={() =>
                   sendEvent(EventTypes.LNG_CLICKED, { language: lng })
                 }
@@ -75,14 +80,18 @@ const Menu: React.FC = () => {
               </a>
             </li>
           ))}
-          <li aria-label={t("a11ylngSwitcherLabel")} className="lng-selector">
+          <li
+            aria-label={t("a11ylngSwitcherLabel")}
+            className="lng-selector"
+            role="group"
+          >
             {supportedLang.map((lng) => (
               <a
                 key={lng}
                 href={lng}
+                role="menuitem"
                 className={classNames({ active: lng === i18n.language })}
                 aria-label={t(`a11ylngSwitcher${lng.toUpperCase()}`)}
-                role="menuitem"
                 onClick={() => {
                   sendEvent(EventTypes.LNG_CLICKED, { language: lng });
                   setIsOpen(false);
