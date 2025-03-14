@@ -11,7 +11,7 @@
     "start-dev": "nodemon dist/server.js",
     "build:prepare": "rm -f build.tar.gz && npm run build && npm run archive",
     "run:prod": "npm run build && npm ci --production --ignore-scripts && node dist/server.js",
-    "archive": "tar -czf build.tar.gz dist package.json package-lock.json .env",
+    "archive": "tar -czf build_$(date +'%Y%m%d_%H%M').tar.gz dist package.json package-lock.json .env",
     "build:client": "webpack --config webpack.config.js --mode=production --config-name client ",
     "build:server": "npm run minify:css && webpack --config webpack.config.js --mode=production --config-name server",
     "dev:server": "webpack --config webpack.config.js --config-name server --mode=development --watch",

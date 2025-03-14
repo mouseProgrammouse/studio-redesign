@@ -23,11 +23,10 @@ const Menu: React.FC = () => {
       role="navigation"
     >
       <div className="desktop-menu">
-        <ul role="menubar">
+        <ul>
           {menuItems.map(({ key, href }) => (
             <li key={key}>
               <a
-                role="menuitem"
                 href={href}
                 onClick={() =>
                   sendEvent(EventTypes.MENU_CLICKED, { menuitem: t(key) })
@@ -37,16 +36,12 @@ const Menu: React.FC = () => {
               </a>
             </li>
           ))}
-          <li
-            aria-label={t("a11ylngSwitcherLabel")}
-            className="lng-selector"
-            role="group"
-          >
+          <li aria-label={t("a11ylngSwitcherLabel")} className="lng-selector">
             {supportedLang.map((lng) => (
               <a
+                role="button"
                 key={lng}
-                href={lng}
-                role="menuitem"
+                aria-current={i18n.language === lng ? "true" : undefined}
                 className={classNames({ active: i18n.language === lng })}
                 aria-label={t(`a11ylngSwitcher${lng.toUpperCase()}`)}
                 onClick={() =>
@@ -62,15 +57,11 @@ const Menu: React.FC = () => {
 
       <div className="mobile-menu">
         <HamburgerMenuIcon isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
-        <ul
-          className={classNames({ visible: isOpen, hidden: !isOpen })}
-          role="menubar"
-        >
+        <ul className={classNames({ visible: isOpen, hidden: !isOpen })}>
           {menuItems.map(({ key, href }) => (
             <li key={key}>
               <a
                 href={href}
-                role="menuitem"
                 onClick={() => {
                   sendEvent(EventTypes.MENU_CLICKED, { menuitem: t(key) });
                   setIsOpen(false);
@@ -80,17 +71,13 @@ const Menu: React.FC = () => {
               </a>
             </li>
           ))}
-          <li
-            aria-label={t("a11ylngSwitcherLabel")}
-            className="lng-selector"
-            role="group"
-          >
+          <li aria-label={t("a11ylngSwitcherLabel")} className="lng-selector">
             {supportedLang.map((lng) => (
               <a
                 key={lng}
-                href={lng}
-                role="menuitem"
-                className={classNames({ active: lng === i18n.language })}
+                role="button"
+                aria-current={i18n.language === lng ? "true" : undefined}
+                className={classNames({ active: i18n.language === lng })}
                 aria-label={t(`a11ylngSwitcher${lng.toUpperCase()}`)}
                 onClick={() => {
                   sendEvent(EventTypes.LNG_CLICKED, { language: lng });
